@@ -1,37 +1,43 @@
 <style>
-body {
-text-align: center;
-font-family: sans-serif;
-}
-</style>
-<h1>Welcome</h1>
-<p>Type in random numbers for no reason at all</p>
-<p id="score">Score: 0</p>
-<button type="button" onclick="getCode()">Generate code</button>
-<p id="code"></p>
-<input type="text" id="inputcode" placeholder="Code goes here">
-<button type="button" onclick="submitCode()">Submit Code</button>
-<script>
-let score = 0;
-let code;
-function getCode() {
-code = `${Math.random().toString().slice(2,11)}`;
-document.getElementById('code').innerHTML = code;
-}
-
-function setScoreboard() {
-document.getElementById('score').innerText = `Score: ${score}`
-}
-
-function submitCode() {
-if(document.getElementById('inputcode').value == code) {
-score++;
-document.getElementById('code').innerText = "Congrats! Your score has increased!" }
-else {
-score--;
-document.getElementById('code').innerText = "You failed. A point has been taken away."
-}
-code = `${Math.random().toString().slice(2,11)}`;
-setScoreboard()
-}
-</script>
+    body {
+    text-align: center;
+    font-family: sans-serif;
+    }
+    </style>
+    <h1>Welcome</h1>
+    <p>Type in random numbers for no reason at all</p>
+    <p id="score">Score: 0</p>
+    <button type="button" onclick="getCode()">Generate code</button>
+    <p id="code"></p>
+    <input type="text" id="inputcode" placeholder="Code goes here">
+    <button type="button" onclick="submitCode()">Submit Code</button>
+    <script>
+    let score;
+    let code;
+    if(localStorage.getItem('score')) {
+        score = localStorage.getItem('score')
+    } else {
+        score = 0
+    }
+    function getCode() {
+    code = `${Math.random().toString().slice(2,11)}`;
+    document.getElementById('code').innerHTML = code;
+    }
+    
+    function setScoreboard() {
+    document.getElementById('score').innerText = `Score: ${score}`
+    }
+    
+    function submitCode() {
+    if(document.getElementById('inputcode').value == code) {
+    score++;
+    document.getElementById('code').innerText = "Congrats! Your score has increased!" }
+    else {
+    score--;
+    document.getElementById('code').innerText = "You failed. A point has been taken away."
+    }
+    code = `${Math.random().toString().slice(2,11)}`;
+    localStorage.setItem('score', score)
+    setScoreboard()
+    }
+    </script>
