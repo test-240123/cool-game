@@ -1,7 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cool game</title>
+</head>
 <style>
     body {
     text-align: center;
     font-family: sans-serif;
+    }
+    a {
+        color: darkslategray;
     }
     </style>
     <h1>Welcome</h1>
@@ -10,8 +20,8 @@
     <button type="button" onclick="getCode()">Generate code</button>
     <p id="code"></p>
     <input type="text" id="inputcode" placeholder="Code goes here">
-    <button type="button" onclick="submitCode()">Submit Code</button>
-    <footer>This website uses cookies to save your score.</footer>
+    <button type="button" onclick="submitCode()">Submit Code</button><br><br>
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21</a></footer>
     <script>
     let score = 0;
     let code;
@@ -64,3 +74,4 @@
             setScoreboard()
     }
     </script>
+    </html>
