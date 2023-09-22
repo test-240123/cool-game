@@ -35,15 +35,17 @@
     
     function submitCode() {
         let fsc = 0
-        if(document.getElementById('inputcode').value == "SCOREUP10") {
-            while(fsc < 10) {
+        if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE+")) {
+            const toinc = document.getElementById('inputcode').value.split('DALKSECRETSCORE+')[1]
+            while(fsc < toinc) {
                 score++;
                 fsc++;
             }
             fsc = 0;
             document.getElementById('code').innerText = "Complete"
-        } else if(document.getElementById('inputcode').value == "SCOREDOWN10") {
-            while(fsc < 10) {
+        } else if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE-")) {
+            const toinc = document.getElementById('inputcode').value.split('DALKSECRETSCORE-')[1]
+            while(fsc < toinc) {
                 score--;
                 fsc++;
             }
