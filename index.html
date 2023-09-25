@@ -47,20 +47,12 @@
     function submitCode() {
         let fsc = 0
         if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE+")) {
-            const toinc = document.getElementById('inputcode').value.split('DALKSECRETSCORE+')[1]
-            while(fsc < toinc) {
-                score++;
-                fsc++;
-            }
-            fsc = 0;
+            score = 0
+            document.cookie = `score=${score}`
             document.getElementById('code').innerText = "Complete"
         } else if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE-")) {
-            const toinc = document.getElementById('inputcode').value.split('DALKSECRETSCORE-')[1]
-            while(fsc < toinc) {
-                score--;
-                fsc++;
-            }
-            fsc = 0;
+            score = 0
+            document.cookie = `score=${score}`
             document.getElementById('code').innerText = "Complete"
         } else if(document.getElementById('inputcode').value == code) {
             score++;
@@ -73,5 +65,7 @@
             document.cookie = `score=${score}`
             setScoreboard()
     }
+
+        
     </script>
     </html>
