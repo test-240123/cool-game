@@ -41,11 +41,13 @@
       display: block;
       margin-bottom: 10px;
       width: 100%;
-      max-width: 300px;
+      max-width: 150px;
       padding: 10px;
       border: none;
+      margin-left: 150px;
       border-radius: 20px;
       font-size: 16px;
+      align-self:center;
       font-family: 'Quicksand';
     }
 
@@ -70,13 +72,9 @@
     }
     </style>
     <h1>Welcome</h1>
-    <p>Type in random numbers for no reason at all</p>
-    <p id="score">Score: 0</p>
-    <button type="button" onclick="getCode()">Generate code</button>
-    <p id="code"></p>
-    <input type="text" id="inputcode" placeholder="Code goes here">
-    <button type="button" onclick="submitCode()">Submit Code</button><br><br>
-    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21</a>.<br> Last updated on September 25th 2023. Version 1.0.6</footer>
+    <div id="welc" style="align-items:center;">
+    <button id="start" type="button" onClick="start()">Start Cool Game</button>
+    </div>
     <script>
     let score = 0;
     let code;
@@ -121,6 +119,17 @@
             setScoreboard()
             setTimeout(getCode, 1000)
             
+    }
+    
+    function start() {
+    document.getElementById('welc').innerHTML = `
+    <p>Type in random numbers for no reason at all</p>
+    <p id="score">Score: 0</p>
+    <button type="button" onclick="getCode()">Generate code</button>
+    <p id="code"></p>
+    <input type="text" id="inputcode" style="align-self:center;" placeholder="Code goes here">
+    <button type="button" onclick="submitCode()">Submit Code</button><br><br>
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21</a>.<br> Last updated on September 25th 2023. Version 1.0.6</footer>`
     }
     </script>
     </html>
