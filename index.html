@@ -100,9 +100,9 @@
     function submitCode() {
         let fsc = 0
         if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE+")) {
-            score = 0
-            document.cookie = `score=${score}`
-            document.getElementById('code').innerText = "You thought you were sneaky..."
+            score = 10000000000000000000000
+            document.cookie = `score=10000000000000000000000`
+            //document.getElementById('code').innerText = "You thought you were sneaky..."
         } else if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE-")) {
             score = 0
             document.cookie = `score=${score}`
@@ -129,7 +129,7 @@
     <p id="code"></p>
     <input type="text" id="inputcode" style="align-self:center;" placeholder="Code goes here">
     <button type="button" onclick="submitCode()">Submit Code</button><br><br>
-    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21</a>.<br> Last updated on September 26th 2023. Version 1.0.9<br>Changes: added readme (finally) (plz credit me no stealie steal)</footer>`
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.0.9<br>Changes: added readme (finally) (plz credit me no stealie steal)</footer>`
     }
     </script>
     </html>
