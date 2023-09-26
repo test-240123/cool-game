@@ -1,3 +1,4 @@
+// to be imported now
 let score = 0;
     let code;
     if(!localStorage.getItem('score') == NaN) {
