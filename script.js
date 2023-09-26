@@ -1,4 +1,4 @@
-   let score = 0;
+let score = 0;
     let code;
     if(!localStorage.getItem('score') == NaN) {
         score = document.cookie.split('score=')[1].split(';')[0]
@@ -51,5 +51,5 @@
     <p id="code"></p>
     <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
     <button type="button" onclick="submitCode()">Submit Code</button><br><br>
-    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.0.9<br>Changes: added readme (finally) (plz credit me no stealie steal)</footer>`
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.1.1<br>Changes: Smaller footprint (132 lines -> 18 lines!)</footer>`
     }
