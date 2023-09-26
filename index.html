@@ -1,132 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://test-240123.github.io/cool-game/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cool game</title>
-</head>
-<style>
-    body {
-      font-family: 'Quicksand';
-      text-align: center;
-      background-color: rgb(10,10,10);
-      background-size: 600% 600%;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    @keyframes gradientBG {
-      0%, 100% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    label, input {
-      margin-bottom: 10px;
-      width: 50%;
-      padding: 10px;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      font-family: 'Quicksand';
-      background-color: rgb(30,30,30);
-      color: white;
-    }
-
-    button {
-      background-color: #ff4545;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
-      font-family: 'Quicksand';
-    }
-
-    button:hover {
-      background-color: #d32f2f;
-    }
-    
-    a {
-    color: white;
-    }
-    </style>
+  </head>
+  <body>
     <h1>Welcome</h1>
     <div id="welc" style="align-items:center;">
-    <button id="start" type="button" onClick="start()">Start Cool Game</button>
+      <button id="start" type="button" onClick="start()">Start Cool Game</button>
     </div>
-    <script>
-    let score = 0;
-    let code;
-    if(!localStorage.getItem('score') == NaN) {
-        score = document.cookie.split('score=')[1].split(';')[0]
-    document.getElementById('score').innerText = `Score: ${score}`
-    } else if(localStorage.getItem('score')) {
-        score = document.cookie.split('score=')[1].split(';')[0]
-    document.getElementById('score').innerText = `Score: ${score}`
-    } else {
-        score = '0'
-        document.cookie = "score=0"
-    }
-    function getCode() {
-    code = `${Math.random().toString().slice(2,11)}`;
-    document.getElementById('code').innerHTML = code;
-    }
-    
-    function setScoreboard() {
-    document.getElementById('score').innerText = `Score: ${score}`
-    }
-    
-    function submitCode() {
-        let fsc = 0
-        if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE+")) {
-            score = 0
-            document.cookie = `score=${score}`
-            document.getElementById('code').innerText = "You thought you were sneaky..."
-        } else if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE-")) {
-            score = 0
-            document.cookie = `score=${score}`
-            document.getElementById('code').innerText = "You thought you were sneaky..."
-        } else if(document.getElementById('inputcode').value == code) {
-            score++;
-            document.getElementById('code').innerText = "Congrats! Your score has increased! (Wait 1s for new code)" }
-        else {
-            score--;
-            document.getElementById('code').innerText = "You failed. A point has been taken away. (Wait 1s for new code)"
-        }
-            code = `${Math.random().toString().slice(2,11)}`;
-            document.cookie = `score=${score}`
-            setScoreboard()
-            setTimeout(getCode, 1000)
-            
-    }
-    
-    function start() {
-    document.getElementById('welc').innerHTML = `
-    <p>Type in random numbers for no reason at all</p>
-    <p id="score">Score: 0</p>
-    <button type="button" onclick="getCode()">Generate code</button>
-    <p id="code"></p>
-    <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
-    <button type="button" onclick="submitCode()">Submit Code</button><br><br>
-    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.1.0<br>Changes: Fixed issues relating to code input box</footer>`
-    }
-    </script>
-    </html>
+  </body>
+  <script src="https://test-240123.github.io/cool-game/script.js"></script>
+</html>
