@@ -1,4 +1,4 @@
-let score = 0;
+   let score = 0;
     let code;
     if(!localStorage.getItem('score') == NaN) {
         score = document.cookie.split('score=')[1].split(';')[0]
@@ -22,29 +22,34 @@ let score = 0;
     function submitCode() {
         let fsc = 0
         if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE+")) {
-            const toinc = document.getElementById('inputcode').value.split('DALKSECRETSCORE+')[1]
-            while(fsc < toinc) {
-                score++;
-                fsc++;
-            }
-            fsc = 0;
-            document.getElementById('code').innerText = "Complete"
+            score = 0
+            document.cookie = `score=${score}`
+            document.getElementById('code').innerText = "You thought you were sneaky..."
         } else if(document.getElementById('inputcode').value.includes("DALKSECRETSCORE-")) {
-            const toinc = document.getElementById('inputcode').value.split('DALKSECRETSCORE-')[1]
-            while(fsc < toinc) {
-                score--;
-                fsc++;
-            }
-            fsc = 0;
-            document.getElementById('code').innerText = "Complete"
+            score = 0
+            document.cookie = `score=${score}`
+            document.getElementById('code').innerText = "You thought you were sneaky..."
         } else if(document.getElementById('inputcode').value == code) {
             score++;
-            document.getElementById('code').innerText = "Congrats! Your score has increased!" }
+            document.getElementById('code').innerText = "Congrats! Your score has increased! (Wait 1s for new code)" }
         else {
             score--;
-            document.getElementById('code').innerText = "You failed. A point has been taken away."
+            document.getElementById('code').innerText = "You failed. A point has been taken away. (Wait 1s for new code)"
         }
             code = `${Math.random().toString().slice(2,11)}`;
             document.cookie = `score=${score}`
             setScoreboard()
+            setTimeout(getCode, 1000)
+            
+    }
+    
+    function start() {
+    document.getElementById('welc').innerHTML = `
+    <p>Type in random numbers for no reason at all</p>
+    <p id="score">Score: 0</p>
+    <button type="button" onclick="getCode()">Generate code</button>
+    <p id="code"></p>
+    <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
+    <button type="button" onclick="submitCode()">Submit Code</button><br><br>
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.0.9<br>Changes: added readme (finally) (plz credit me no stealie steal)</footer>`
     }
