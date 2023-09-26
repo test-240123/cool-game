@@ -1,4 +1,3 @@
-// to be imported now
 let score = 0;
     let code;
     if(!localStorage.getItem('score') == NaN) {
@@ -53,4 +52,13 @@ let score = 0;
     <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
     <button type="button" onclick="submitCode()">Submit Code</button><br><br>
     <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.1.1<br>Changes: Smaller footprint (132 lines -> 18 lines!)</footer>`
+    }
+
+    let changesOn = false;
+    function showChanges() {
+        if(changesOn == false) {
+            document.getElementById('changelog').innerHTML = `v1.1.1: Added changelog button`
+        } else {
+            document.getElementById('changelog').innerHTML = ` `
+        }
     }
