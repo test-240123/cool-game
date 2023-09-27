@@ -1,15 +1,5 @@
-let score = 0;
+    let score = 0;
     let code;
-    if(!localStorage.getItem('score') == NaN) {
-        score = document.cookie.split('score=')[1].split(';')[0]
-    document.getElementById('score').innerText = `Score: ${score}`
-    } else if(localStorage.getItem('score')) {
-        score = document.cookie.split('score=')[1].split(';')[0]
-    document.getElementById('score').innerText = `Score: ${score}`
-    } else {
-        score = '0'
-        document.cookie = "score=0"
-    }
     function getCode() {
     code = `${Math.random().toString().slice(2,11)}`;
     document.getElementById('code').innerHTML = code;
@@ -44,6 +34,7 @@ let score = 0;
     }
     
     function start() {
+        
     document.getElementById('welc').innerHTML = `
     <p>Type in random numbers for no reason at all</p>
     <p id="score">Score: 0</p>
@@ -52,6 +43,14 @@ let score = 0;
     <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
     <button type="button" onclick="submitCode()">Submit Code</button><br><br>
     <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website currently down)</a>.<br> Last updated on September 26th 2023. Version 1.1.2<br>Changes: new domain + favicon</footer>`
+    if(document.cookie.includes('score=')) {
+        score = document.cookie.split('score=')[1].split(';')[0]
+        setScoreboard()
+    } else {
+        document.cookie = "score=0;"
+        score = 0;
+        setScoreboard()
+    }
     }
 
     let changesOn = false;
