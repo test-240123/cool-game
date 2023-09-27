@@ -58,7 +58,9 @@ let score = 0;
     function showChanges() {
         if(changesOn == false) {
             document.getElementById('changelog').innerHTML = `v1.1.1: Added changelog button`
+            changesOn = true
         } else {
             document.getElementById('changelog').innerHTML = ` `
+            changesOn = false
         }
     }
