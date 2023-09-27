@@ -8,6 +8,10 @@ its built using simple html, css, and javascript\
 the project is (mostly) javascript\
 \
 you are free to use this code however you want as long as you credit me\
+\
+NOTE:\
+website seems not to work on mobile (too many redirects?) works on most other platforms\
+\
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![Version](https://img.shields.io/badge/version-1.1.3-yellow.svg)
 ![Release date](https://img.shields.io/badge/released%20on-26/09/2023-blue.svg)
