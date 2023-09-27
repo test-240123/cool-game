@@ -42,7 +42,7 @@
     <p id="code"></p>
     <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
     <button type="button" onclick="submitCode()">Submit Code</button><br><br>
-    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website back online)</a>.<br> Last updated on September 26th 2023. Version 1.1.2<br>Changes: new domain + favicon</footer>`
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website back online)</a>.<br> Last updated on September 26th 2023. Version 1.1.3<br>Changes: new domain + favicon + saving scores</footer>`
     if(document.cookie.includes('score=')) {
         score = document.cookie.split('score=')[1].split(';')[0]
         setScoreboard()
@@ -56,7 +56,7 @@
     let changesOn = false;
     function showChanges() {
         if(changesOn == false) {
-            document.getElementById('changelog').innerHTML = `v1.1.2: Added custom domain (cool-game.xyz) + favicon (icon that represents the website)<br>v1.1.1: Added changelog button`
+            document.getElementById('changelog').innerHTML = `v1.1.3: fixed saving scores<br>v1.1.2: Added custom domain (cool-game.xyz) + favicon (icon that represents the website)<br>v1.1.1: Added changelog button`
             changesOn = true
         } else {
             document.getElementById('changelog').innerHTML = ` `
