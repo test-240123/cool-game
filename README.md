@@ -9,10 +9,7 @@ the project is (mostly) javascript\
 \
 you are free to use this code however you want as long as you credit me\
 \
-NOTE:\
-website seems not to work on mobile (too many redirects?) works on most other platforms\
-UPDATE:\
-issue seems to be server-wide. possibly an issue on github or cloudflares end
+issues with cookies should be fixed. please create an issue if you find an error
 \
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![Version](https://img.shields.io/badge/version-1.1.3-yellow.svg)
