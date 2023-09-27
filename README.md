@@ -18,5 +18,5 @@ you are free to use this code however you want as long as you credit me\
 - [@Dalk21](https://www.github.com/Dalk21) - main account
 - [@test-240123](https://www.github.com/test-240123) - alt account
 
-Visit my main website:
-(dalk.lol)[https://dalk.lol/]
+Visit my main website:\
+[dalk.lol](https://dalk.lol/)
