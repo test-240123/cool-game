@@ -42,7 +42,7 @@
     <p id="code"></p>
     <input type="number" id="inputcode" style="align-self:center;" placeholder="Code goes here" accepts="numbers"><br>
     <button type="button" onclick="submitCode()">Submit Code</button><br><br>
-    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21 (website back online)</a>.<br> Last updated on September 27th 2023. Version 1.1.4<br>Changes: new domain + favicon + saving scores + quality of life change</footer>`
+    <footer>This website uses cookies to save your score. made by <a href="https://dalk.lol/">Dalk21</a>.<br>Any ideas for the game? Email me at <a href="mailto:dalk@dalk.lol">dalk@dalk.lol</a>.<br>Last updated on September 27th 2023. Version 1.1.4<br>Changes: new domain + favicon + saving scores + quality of life change</footer>`
     if(document.cookie.includes('score=')) {
         score = document.cookie.split('score=')[1].split(';')[0]
         setScoreboard()
