@@ -9,9 +9,9 @@ the project is (mostly) javascript\
 \
 you are free to use this code however you want as long as you credit me\
 \
-issues with cookies should be fixed. please create an issue if you find an error\
+issues with cookies should be fixed. please create an issue if you find an error
 
-![Website Screenshot](https://cool-game.xyz/preview.png)\
+![Website Screenshot](https://cool-game.xyz/preview.png)
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)\
