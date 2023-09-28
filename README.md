@@ -11,8 +11,12 @@ you are free to use this code however you want as long as you credit me\
 \
 issues with cookies should be fixed. please create an issue if you find an error
 \
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-![Version](https://img.shields.io/badge/version-1.1.4-yellow.svg)
+
+![Website Screenshot](https://cool-game.xyz/preview.png)\
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)\
+![Version](https://img.shields.io/badge/version-1.1.4-yellow.svg)\
 ![Release date](https://img.shields.io/badge/released%20on-27/09/2023-blue.svg)
 
 
